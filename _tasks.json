@@ -19,6 +19,7 @@
         "name": "API returning error",
         "category": "To Do",
         "priority": "highest",
+        "tag": "XCode Project",
         "estimated_time": "1d"
     },
     {
@@ -28,6 +29,7 @@
             "plan": "active"
         },
         "priority": "highest",
+        "tag": "Mediatec",
         "estimated_time": "3h"
     },
     {
@@ -35,6 +37,7 @@
         "name": "Confirmation screen error",
         "category": "test",
         "priority": "high",
+        "tag": "XCode Project",
         "estimated_time": "4h"
     },
     {
@@ -42,6 +45,7 @@
         "name": "Perform upgrades",
         "category": "To Do",
         "priority": "normal",
+        "tag": "Travel App",
         "estimated_time": "4h"
     },
     {
@@ -51,6 +55,7 @@
             "plan": "complete"
         },
         "priority": "low",
+        "tag": "XCode Project",
         "estimated_time": "2d"
     },
     {
@@ -58,6 +63,7 @@
         "name": "Research tools",
         "category": "To Do",
         "priority": "lowest",
+        "tag": "Travel App",
         "estimated_time": "2h"
     },
     {
@@ -67,6 +73,7 @@
             "development": "active"
         },
         "priority": "lowest",
+        "tag": "Travel App",
         "estimated_time": "0.5h"
     }
 ]
