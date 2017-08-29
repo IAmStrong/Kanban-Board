@@ -10,16 +10,119 @@
     </head>
     <body>
         <header class="header">
-            <div class="title-container">
-                <span class="title">Kanban</span>
-                <span class="description">/ Board</span>
-            </div>
-            <div class="search-container">
-                <input type="text" class="search" placeholder="Search...">
-                <i class="fa fa-search" aria-hidden="true"></i>
+            <div class="header-wrapper">
+                <div class="title-container">
+                    <span class="title">Kanban</span>
+                    <span class="description">/ Board</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" class="search" placeholder="Search...">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
             </div>
         </header>
         <div class="main-wrapper">
+            <div class="board">
+                <div class="board-header">
+                    <div class="header-section primary">
+                        <div class="header-title todo">To Do</div>
+                        <div class="header-title plan">Plan</div>
+                        <div class="header-title development">Development</div>
+                        <div class="header-title test">Test</div>
+                        <div class="header-title deploy">Deploy</div>
+                    </div>
+                    <div class="header-section secondary">
+                        <span class="header-title empty"></span>
+                        <span class="header-title">Active</span>
+                        <span class="header-title">Complete</span>
+                        <span class="header-title">Active</span>
+                        <span class="header-title">Complete</span>
+                        <span class="header-title empty"></span>
+                    </div>
+                </div>
+                <div class="section-container">
+                    <div class="board-section todo">
+                        <div class="task normal-priority">
+                            <p class="task-title">#Task01</p>
+                            <p class="task-name">Perform upgrades</p>
+                            <div class="task-assignee-container">
+                                <span class="task-Assignee">Michael</span>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="task-time-container">
+                                <span class="task-time">4h</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="task lowest-priority">
+                            <p class="task-title">#Task03</p>
+                            <p class="task-name">Research tools</p>
+                            <div class="task-assignee-container">
+                                <span class="task-Assignee">David</span>
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="task-time-container">
+                                <span class="task-time">2h</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="task highest-priority">
+                            <p class="task-title">#Task02</p>
+                            <p class="task-name">API returning error</p>
+                            <div class="task-assignee-container">
+                                <span class="task-Assignee">John</span>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                            <div class="task-time-container">
+                                <span class="task-time">1d</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-section plan-active">
+                        <div class="task highest-priority">
+                            <p class="task-title">#Task04</p>
+                            <p class="task-name">IDs not working</p>
+                            <div class="task-time-container">
+                                <span class="task-time">3h</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-section plan-complete">
+                        <div class="task low-priority">
+                            <p class="task-title">#Task05</p>
+                            <p class="task-name">Migrate systems</p>
+                            <div class="task-time-container">
+                                <span class="task-time">2d</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-section development-active">
+                        <div class="task lowest-priority">
+                            <p class="task-title">#Task06</p>
+                            <p class="task-name">Minor improvement to SSL</p>
+                            <div class="task-time-container">
+                                <span class="task-time">0.5h</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-section development-complete"></div>
+                    <div class="board-section test">
+                        <div class="task high-priority">
+                            <p class="task-title">#Task07</p>
+                            <p class="task-name">Confirmation screen error</p>
+                            <div class="task-time-container">
+                                <span class="task-time">4h</span>
+                                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board-section deploy"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
