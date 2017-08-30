@@ -15,12 +15,28 @@
         "project_id": 0
     },
     {
+        "id": 1,
+        "name": "Perform upgrades",
+        "category": "To Do",
+        "priority": "normal",
+        "tag": "Travel App",
+        "estimated_time": "4h"
+    },
+    {
         "id": 2,
         "name": "API returning error",
         "category": "To Do",
         "priority": "highest",
         "tag": "XCode Project",
         "estimated_time": "1d"
+    },
+    {
+        "id": 3,
+        "name": "Research tools",
+        "category": "To Do",
+        "priority": "lowest",
+        "tag": "Travel App",
+        "estimated_time": "2h"
     },
     {
         "id": 4,
@@ -33,22 +49,6 @@
         "estimated_time": "3h"
     },
     {
-        "id": 7,
-        "name": "Confirmation screen error",
-        "category": "test",
-        "priority": "high",
-        "tag": "XCode Project",
-        "estimated_time": "4h"
-    },
-    {
-        "id": 1,
-        "name": "Perform upgrades",
-        "category": "To Do",
-        "priority": "normal",
-        "tag": "Travel App",
-        "estimated_time": "4h"
-    },
-    {
         "id": 5,
         "name": "Migrate systems",
         "category": {
@@ -59,14 +59,6 @@
         "estimated_time": "2d"
     },
     {
-        "id": 3,
-        "name": "Research tools",
-        "category": "To Do",
-        "priority": "lowest",
-        "tag": "Travel App",
-        "estimated_time": "2h"
-    },
-    {
         "id": 6,
         "name": "Minor improvement to SSL",
         "category": {
@@ -75,5 +67,93 @@
         "priority": "lowest",
         "tag": "Travel App",
         "estimated_time": "0.5h"
+    },
+    {
+        "id": 7,
+        "name": "Confirmation screen error",
+        "category": "Test",
+        "priority": "high",
+        "tag": "XCode Project",
+        "estimated_time": "4h"
+    },
+    {
+        "id": 8,
+        "name": "Add contact form",
+        "category": "To Do",
+        "priority": "low",
+        "tag": "Mediatec",
+        "estimated_time": "0.7h"
+    },
+    {
+        "id": 9,
+        "name": "MVVM core enhancements",
+        "category": {
+            "plan": "active"
+        },
+        "priority": "high",
+        "tag": "XCode Project",
+        "estimated_time": "4d"
+    },
+    {
+        "id": 10,
+        "name": "Modify report templates",
+        "category": {
+            "development": "active"
+        },
+        "priority": "highest",
+        "tag": "Travel App",
+        "estimated_time": "2h"
+    },
+    {
+        "id": 11,
+        "name": "Change the initial view",
+        "category": {
+            "development": "active"
+        },
+        "priority": "normal",
+        "tag": "Mediatec",
+        "estimated_time": "1h"
+    },
+    {
+        "id": 12,
+        "name": "Add video chat interface",
+        "category": {
+            "development": "complete"
+        },
+        "priority": "normal",
+        "tag": "Travel App",
+        "estimated_time": "1d"
+    },
+    {
+        "id": 13,
+        "name": "Homepage footer uses an inline style - should use a class",
+        "category": "test",
+        "priority": "low",
+        "tag": "Mediatec",
+        "estimated_time": "0.5h"
+    },
+    {
+        "id": 14,
+        "name": "Google Apps integration",
+        "category": "deploy",
+        "priority": "normal",
+        "tag": "Mediatec",
+        "estimated_time": "3h"
+    },
+    {
+        "id": 15,
+        "name": "Parameter to control the length of the search",
+        "category": "deploy",
+        "priority": "lowest",
+        "tag": "Travel App",
+        "estimated_time": "0.2h"
+    },
+    {
+        "id": 16,
+        "name": "Payroll API v2.1",
+        "category": "deploy",
+        "priority": "high",
+        "tag": "XCode Project",
+        "estimated_time": "2d"
     }
 ]
