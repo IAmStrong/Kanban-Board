@@ -3,6 +3,7 @@
 @import 'styles.less';
 
 .main-wrapper {
+    position: relative;
     max-width: @max-width-task - @space-width * 2;
     margin: @space-width auto;
     background: transparent;
@@ -22,10 +23,30 @@
             font-size: 22px;
             color: @text-primary;
             padding: 0 20px;
+            &.lowest-priority {
+                .bg-lowest-priority();
+                color: darken(@lowest-priority-primary, 35%);
+                border: 1px solid @lowest-priority-primary;
+            }
             &.low-priority {
                 .bg-low-priority();
                 color: darken(@low-priority-primary, 35%);
                 border: 1px solid @low-priority-primary;
+            }
+            &.normal-priority {
+                .bg-normal-priority();
+                color: darken(@normal-priority-primary, 35%);
+                border: 1px solid @normal-priority-primary;
+            }
+            &.high-priority {
+                .bg-high-priority();
+                color: darken(@high-priority-primary, 35%);
+                border: 1px solid @high-priority-primary;
+            }
+            &.highest-priority {
+                .bg-highest-priority();
+                color: darken(@highest-priority-primary, 35%);
+                border: 1px solid @highest-priority-primary;
             }
         }
     }
@@ -61,7 +82,6 @@
             }
             .task-info-header {
                 position: relative;
-                box-shadow: 0 5px 16px -6px #827ca1;
             }
             .task-info {
                 position: relative;
@@ -100,10 +120,12 @@
         }
         .task-watchers.container {
             .task-watchers {
+                position: relative;
                 display: flex;
                 justify-content: center;
                 height: @board-header-height;
                 padding: 0 20px;
+                box-shadow: 0 5px 16px -6px #827ca1;
                 .watchers.text {
                     width: 50%;
                 }
@@ -132,7 +154,6 @@
             justify-content: space-around;
             height: @board-header-height;
             padding: 0 20px;
-            box-shadow: 0 5px 16px -6px #827ca1;  
         }
         .description-title.header,
         .reporter-title.header,
@@ -146,7 +167,6 @@
             font-size: 18px;
             text-transform: uppercase;
             padding: 0 20px;
-            // box-shadow: 0 5px 16px -6px #827ca1;
         }
         .header-secondary {
             display: flex;
@@ -170,5 +190,11 @@
         .highlight {
             background: @color-section;
         }
+    }
+    .fa.fa-arrow-left {
+        position: absolute;
+        top: 20px;
+        left: -28px;
+        z-index: 2;
     }
 }
