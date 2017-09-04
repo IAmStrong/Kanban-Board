@@ -3,103 +3,127 @@
 @import 'styles.less';
 
 .main-wrapper {
-    position: relative;
     max-width: @max-width-task - @space-width * 2;
     margin: @space-width auto;
     background: transparent;
     box-shadow: none;
-    .task-header {
-        position: relative;
-        height: 60px;
-        margin-bottom: @space-width;
-        box-shadow: 0 5px 16px -6px #827ca1;
-        z-index: 1;
-        .task-title {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: inherit;
-            font-size: 22px;
-            color: @text-primary;
-            padding: 0 20px;
-            &.lowest-priority {
-                .bg-lowest-priority();
-                color: darken(@lowest-priority-primary, 35%);
-                border: 1px solid @lowest-priority-primary;
-            }
-            &.low-priority {
-                .bg-low-priority();
-                color: darken(@low-priority-primary, 35%);
-                border: 1px solid @low-priority-primary;
-            }
-            &.normal-priority {
-                .bg-normal-priority();
-                color: darken(@normal-priority-primary, 35%);
-                border: 1px solid @normal-priority-primary;
-            }
-            &.high-priority {
-                .bg-high-priority();
-                color: darken(@high-priority-primary, 35%);
-                border: 1px solid @high-priority-primary;
-            }
-            &.highest-priority {
-                .bg-highest-priority();
-                color: darken(@highest-priority-primary, 35%);
-                border: 1px solid @highest-priority-primary;
-            }
-        }
-    }
     .task {
         width: 100%;
         background: @bg-primary;
         box-shadow: 0 2px 10px -2px rgba(55, 58, 60, 0.3);
-        .task-info.container {
-            .task-info-header,
-            .task-info {
+        .task-header {
+            box-shadow: 0 5px 16px -6px @color-secondary;
+            z-index: 1;
+            .task-title {
+                position: relative;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
+                width: 100%;
                 height: @board-header-height;
+                font-size: 22px;
+                color: @text-primary;
                 padding: 0 20px;
-                .info-title-header,
-                .info-text {
+                box-shadow: 0 5px 16px -6px @color-secondary;
+                z-index: 1;
+            }
+            &.lowest-priority {
+                .task-title {
+                    .bg-lowest-priority();
+                    color: darken(@lowest-priority-primary, 35%);
+                    border: 1px solid @lowest-priority-primary;
+                }
+                .fa.fa-pencil-square-o {
+                    color: darken(@lowest-priority-primary, 35%);
+                }
+            }
+            &.low-priority {
+                .task-title {
+                    .bg-low-priority();
+                    color: darken(@low-priority-primary, 35%);
+                    border: 1px solid @low-priority-primary;
+                }
+                .fa.fa-pencil-square-o {
+                    color: darken(@low-priority-primary, 35%);
+                }
+            }
+            &.normal-priority {
+                .task-title {
+                    .bg-normal-priority();
+                    color: darken(@normal-priority-primary, 35%);
+                    border: 1px solid @normal-priority-primary;
+                }
+                .fa.fa-pencil-square-o {
+                    color: darken(@normal-priority-primary, 35%);
+                }
+            }
+            &.high-priority {
+                .task-title {
+                    .bg-high-priority();
+                    color: darken(@high-priority-primary, 35%);
+                    border: 1px solid @high-priority-primary;
+                }
+                .fa.fa-pencil-square-o {
+                    color: darken(@high-priority-primary, 35%);
+                }
+            }
+            &.highest-priority {
+                .task-title {
+                    .bg-highest-priority();
+                    color: darken(@highest-priority-primary, 35%);
+                    border: 1px solid @highest-priority-primary;
+                }
+                .fa.fa-pencil-square-o {
+                    color: darken(@highest-priority-primary, 35%);
+                }
+            }
+            .task-info.container {
+                .task-info-header,
+                .task-info {
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
-                    width: 20%;
-                    height: inherit;
-                    color: @color-secondary;
-                    font-size: 18px;
-                    text-align: center;
+                    height: @board-header-height;
+                    padding: 0 20px;
+                    .info-title-header,
+                    .info-text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 20%;
+                        height: inherit;
+                        color: @color-secondary;
+                        font-size: 18px;
+                        text-align: center;
+                    }
+                    .info-title-header {
+                        color: @text-primary;
+                        font-weight: bold;
+                        font-size: 18px;
+                        text-transform: uppercase;
+                    }
                 }
-                .info-title-header {
-                    color: @text-primary;
-                    font-weight: bold;
-                    font-size: 18px;
-                    text-transform: uppercase;
+                .task-info-header {
+                    position: relative;
                 }
-            }
-            .task-info-header {
-                position: relative;
-            }
-            .task-info {
-                position: relative;
-                height: @board-header-height;
-                box-shadow: 0 5px 16px -6px #827ca1;
+                .task-info {
+                    position: relative;
+                    height: @board-header-height;
+                }
             }
         }
-        .task-description-container {
+        .task-description.container {
+            box-shadow: 0 5px 16px -6px @color-secondary;
             .task-description {
                 position: relative;
                 padding: 0 20px 20px;
                 color: @color-secondary;
                 font-size: 16px;
-                box-shadow: 0 5px 16px -6px #827ca1;
             }
         }
         .task-reporter.container {
-            box-shadow: 0 5px 16px -6px #827ca1;
+            box-shadow: 0 5px 16px -6px @color-secondary;
+            z-index: 1;
             .header-secondary {
                 width: 33.33%;
                 height: auto;
@@ -112,20 +136,19 @@
                 justify-content: center;
                 height: @board-header-height;
                 padding: 0 20px;
-                box-shadow: 0 5px 16px -6px #827ca1;
                 .reporter.text {
                     width: 33.33%;
                 }
             }
         }
         .task-watchers.container {
+            box-shadow: 0 5px 16px -6px @color-secondary;
             .task-watchers {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 height: @board-header-height;
                 padding: 0 20px;
-                box-shadow: 0 5px 16px -6px #827ca1;
                 .watchers.text {
                     width: 50%;
                 }
@@ -190,11 +213,26 @@
         .highlight {
             background: @color-section;
         }
-    }
-    .fa.fa-arrow-left {
-        position: absolute;
-        top: 20px;
-        left: -28px;
-        z-index: 2;
+        .task-header,
+        .task-info.container,
+        .task-description.container,
+        .task-reporter.container,
+        .task-watchers.container,
+        .task-dates.container {
+            position: relative;
+            &:hover .fa.fa-pencil-square-o {
+                display: block;
+            }
+        }
+        .fa.fa-pencil-square-o {
+            display: none;
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 20px;
+            color: @color-secondary;
+            cursor: pointer;
+            z-index: 2;
+        }
     }
 }
