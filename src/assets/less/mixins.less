@@ -1,0 +1,27 @@
+@font-face {
+    .font-face('Open Sans', 'OpenSans', normal, normal);
+}
+
+@font-face {
+    .font-face('Open Sans', 'OpenSans-Light', 300, normal);
+}
+
+@font-face {
+    .font-face('Open Sans', 'OpenSans-Bold', bold, normal);
+}
+
+.font-face (@family, @name, @weight, @style) {
+    font-family: @family;
+    src: url('/assets/fonts/@{name}.eot');
+    src: url('/assets/fonts/@{name}.eot?#iefix') format('embedded-opentype'),
+        url('/assets/fonts/@{name}.woff2') format('woff2'),
+        url('/assets/fonts/@{name}.woff') format('woff'),
+        url('/assets/fonts/@{name}.ttf') format('truetype'),
+        url('/assets/fonts/@{name}.svg#@{name}') format('svg');
+    font-weight: @weight;
+    font-style: @style;
+}
+
+.box-shadow-main () {
+    box-shadow: 0 2px 10px -5px rgba(55, 58, 60, 0.3);
+}
