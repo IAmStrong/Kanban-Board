@@ -1,4 +1,4 @@
-import { Routes, RouterModule }   from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { BoardComponent } from './board/board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -12,14 +12,16 @@ const router: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
         data: {
-            test: 'sdsa'
+            title: 'Dashboard',
+            searchAvailable: false
         }
     },
     {
         path: 'board', 
         component: BoardComponent,
         data: {
-            title: 'Board'
+            title: 'Board',
+            searchAvailable: true
         }
     }
 ];

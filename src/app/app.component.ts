@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
+
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,24 +12,42 @@ import { Title } from '@angular/platform-browser';
     styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-    title: any;
+export class AppComponent implements OnInit {
+    title: string;
+    searchAvailable: boolean;
 
-    constructor(private router: ActivatedRoute, private titleService: Title) {
-        console.log(this.router.snapshot);
+    constructor(
+        private router: Router, 
+        private activatedRoute: ActivatedRoute, 
+        private titleService: Title
+    ) {}
+
+    ngOnInit () {
+        this.router.events
+            .filter((event) => event instanceof NavigationEnd)
+            .map(() => this.activatedRoute)
+            .map((route) => {
+                while (route.firstChild) route = route.firstChild;
+
+                return route;
+            })
+            .filter((route) => route.outlet === 'primary')
+            .mergeMap((route) => route.data)
+            .subscribe((event) => {
+                const title = event.title;
+                const searchAvailable = event.searchAvailable;
+
+                this.searchAvailable = searchAvailable;
+                this.setTitle(title);
+                this.title = title;
+            });
     }
 
-    // ngOnInit () {
-    //             // this.title = route.snapshot.data;
+    private setTitle (title: string) {
+        const currentTitle = this.titleService.getTitle();
+        const changeTitle = this.titleService.setTitle.bind(this.titleService);
+        const newTitle = `Kanban - ${title}`;
 
-    //     // this.sub = this.router.params.subscribe(params => {
-    //     //     console.log(params);
-    //     // });
-    //     this.setTitle('w');
-    //     console.log(this.router.url);
-    // }
-
-    // public setTitle (newTitle: string) {
-    //     this.titleService.setTitle('My awesome app');
-    // }
+        currentTitle != newTitle && changeTitle(newTitle);
+    }
 }
