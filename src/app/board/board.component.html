@@ -1,3 +1,73 @@
-<p>
-    board works!
-</p>
+<div class="board">
+    <div class="board-header">
+        <div class="header-section primary">
+            <div class="header-title todo">To Do</div>
+            <div class="header-title plan">Plan</div>
+            <div class="header-title development">Development</div>
+            <div class="header-title test">Test</div>
+            <div class="header-title deploy">Deploy</div>
+        </div>
+        <div class="header-section secondary">
+            <span class="header-title empty"></span>
+            <span class="header-title">Active</span>
+            <span class="header-title">Complete</span>
+            <span class="header-title">Active</span>
+            <span class="header-title">Complete</span>
+            <span class="header-title empty"></span>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="board-section todo">
+
+            <div class="task normal-priority">
+                <p class="task-title">#Task01</p>
+                <p class="task-name">Perform upgrades</p>
+                <div class="task-tag-container">
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <span class="task-tag">Travel App</span>
+                </div>
+                <div class="task-time-container">
+                    <span class="task-time">4h</span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="board-section plan-active"></div>
+        <div class="board-section plan-complete">
+
+            <div class="task low-priority">
+                <p class="task-title">#Task05</p>
+                <p class="task-name">Migrate systems</p>
+                <div class="task-tag-container">
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <span class="task-tag">XCode Project</span>
+                </div>
+                <div class="task-time-container">
+                    <span class="task-time">2d</span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="board-section development-active"></div>
+        <div class="board-section development-complete"></div>
+        <div class="board-section test">
+
+            <div class="task high-priority">
+                <p class="task-title">#Task07</p>
+                <p class="task-name">Confirmation screen error</p>
+                <div class="task-tag-container">
+                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <span class="task-tag">XCode Project</span>
+                </div>
+                <div class="task-time-container">
+                    <span class="task-time">4h</span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="board-section deploy"></div>
+    </div>
+</div>

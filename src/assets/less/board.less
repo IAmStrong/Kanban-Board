@@ -1,0 +1,167 @@
+// out: ../../app/board/board.component.css, compress: true, sourceMap: false
+
+@import 'variables.less';
+@import 'mixins.less';
+
+.board {
+    width: 100%;
+    height: 100%;
+    .board-header {
+        .header-section {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            height: @header-height-board;
+            box-shadow: 0 5px 16px -6px @color-secondary;
+            z-index: 1;
+            .header-title {
+                width: 14.28%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &.primary {
+                .header-title {
+                    height: inherit;
+                    font-weight: bold;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    color: @text-primary;
+                    &.plan,
+                    &.development {
+                        width: 28.57%;
+                    }
+                } 
+            }
+            &.secondary {
+                .header-title {
+                    font-size: 18px;
+                    color: @color-secondary;
+                    &.empty:last-child {
+                        width: 28.57%;
+                    }
+                }
+            }
+        }
+    }
+    .section-container {
+        display: flex;
+        justify-content: space-between;
+        min-height: ~"calc(100vh - (@{header-height} + @{space-width} * 2 + @{header-height-board} * 2))";
+        .board-section {
+            width: 14.28%;
+            padding: 30px 20px;
+            &:nth-child(even) {
+                background: @color-section;
+            }
+            .task {
+                position: relative;
+                width: 100%;
+                height: 140px;
+                padding: 7px 10px;
+                border-radius: 4px;
+                .box-shadow-task();
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+                .task-title {
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+                .task-name {
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+                .task-time-container {
+                    position: absolute;
+                    right: 10px;
+                    bottom: 7px;
+                    .task-time {
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    .fa {
+                        font-size: 15px;
+                    }
+                }
+                .task-tag-container {
+                    position: absolute;
+                    left: 10px;
+                    bottom: 8px;
+                    .task-tag {
+                        font-size: 12px;
+                        text-transform: uppercase;
+                    }
+                    .fa {
+                        font-size: 14px;
+                    }
+                }
+                &.highest-priority {
+                    border: 1px solid @highest-priority-primary;
+                    .bg-highest-priority();
+                    .task-title,
+                    .task-time-container,
+                    .task-tag-container {
+                        color: darken(@highest-priority-primary, 35%);
+                    }
+                    .task-name,
+                    .task-tag {
+                        color: darken(@highest-priority-primary, 45%);
+                    }
+                }
+                &.high-priority {
+                    border: 1px solid @high-priority-primary;
+                    .bg-high-priority();
+                    .task-title,
+                    .task-time-container,
+                    .task-tag-container {
+                        color: darken(@high-priority-primary, 35%);
+                    }
+                    .task-name,
+                    .task-tag {
+                        color: darken(@high-priority-primary, 45%);
+                    }
+                }
+                &.normal-priority {
+                    border: 1px solid @normal-priority-primary;
+                    .bg-normal-priority();
+                    .task-title,
+                    .task-time-container,
+                    .task-tag-container {
+                        color: darken(@normal-priority-primary, 35%);
+                    }
+                    .task-name,
+                    .task-tag {
+                        color: darken(@normal-priority-primary, 45%);
+                    }
+                }
+                &.low-priority {
+                    border: 1px solid @low-priority-primary;
+                    .bg-low-priority();
+                    .task-title,
+                    .task-time-container,
+                    .task-tag-container {
+                        color: darken(@low-priority-primary, 35%);
+                    }
+                    .task-name,
+                    .task-tag {
+                        color: darken(@low-priority-primary, 45%);
+                    }
+                }
+                &.lowest-priority {
+                    border: 1px solid @lowest-priority-primary;
+                    .bg-lowest-priority();
+                    .task-title,
+                    .task-time-container,
+                    .task-tag-container {
+                        color: darken(@lowest-priority-primary, 35%);
+                    }
+                    .task-name,
+                    .task-tag {
+                        color: darken(@lowest-priority-primary, 45%);
+                    }
+                }
+            }
+        }
+    }
+}

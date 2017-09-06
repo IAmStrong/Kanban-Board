@@ -1,5 +1,6 @@
 // out: ../../styles.css, compress: true, sourceMap: false
 
+@import '../../../node_modules/font-awesome/less/font-awesome';
 @import 'variables.less';
 @import 'mixins.less';
 
@@ -81,4 +82,12 @@ p {
             background: @bg-initial;
         }
     }
+}
+
+.main-wrapper {
+    max-width: @max-width - @space-width * 2;
+    min-height: ~"calc(100% - @{header-height} - @{space-width} * 2)";
+    margin: @space-width auto;
+    background: @bg-initial;
+    .box-shadow-secondary();
 }

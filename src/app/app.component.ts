@@ -51,3 +51,5 @@ export class AppComponent implements OnInit {
         currentTitle != newTitle && changeTitle(newTitle);
     }
 }
+
+// https://angular.io/tutorial/toh-pt3

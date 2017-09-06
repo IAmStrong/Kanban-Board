@@ -25,3 +25,32 @@
 .box-shadow-main () {
     box-shadow: 0 2px 10px -5px rgba(55, 58, 60, 0.3);
 }
+
+.box-shadow-secondary () {
+    box-shadow: 0 2px 10px -2px rgba(55, 58, 60, 0.3);
+}
+
+.box-shadow-task () {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.bg-highest-priority () {
+    background: linear-gradient(to bottom, @highest-priority-secondary  0%, @highest-priority-primary 100%);
+}
+
+.bg-high-priority () {
+    background: linear-gradient(to bottom, @high-priority-secondary 0%, @high-priority-primary 100%);
+}
+
+.bg-normal-priority () {
+    background: linear-gradient(to bottom, @normal-priority-secondary 0%, @normal-priority-primary 100%);
+}
+
+.bg-low-priority () {
+    background: linear-gradient(to bottom, @low-priority-secondary 0%, @low-priority-primary 100%);
+}
+
+.bg-lowest-priority () {
+    background: linear-gradient(to bottom, @lowest-priority-secondary 0%, @lowest-priority-primary 100%);
+}
