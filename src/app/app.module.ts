@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http'; //
 
 import { routes } from './app.router';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     ],
     imports: [
         BrowserModule,
+        HttpModule,
         BoardModule,
         DashboardModule,
         routes
