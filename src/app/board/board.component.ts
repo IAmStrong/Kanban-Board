@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
     selector: 'app-board',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class BoardComponent implements OnInit {
-    constructor () {}
+    constructor (private dataService: DataService) {}
 
-    ngOnInit () {}
+    ngOnInit () {
+        console.log('YESS!!!! :::: ', this.dataService);
+    }
 }

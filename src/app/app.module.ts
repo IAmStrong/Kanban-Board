@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'; //
 
 import { routes } from './app.router';
+import { DataService } from './data.service';
 import { AppComponent } from './app.component';
 import { BoardModule } from './board/board.module';
 import { DashboardModule } from './dashboard/dashboard.module';
@@ -18,7 +19,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
         DashboardModule,
         routes
     ],
-    providers: [],
+    providers: [DataService],
     bootstrap: [AppComponent]
 })
 

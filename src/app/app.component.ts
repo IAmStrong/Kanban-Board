@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { Title } from '@angular/platform-browser';
 import { Http, Response } from "@angular/http";
+import { DataService } from './data.service';
 
 @Component({
     selector: 'app-root',
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit {
     constructor (
         private router: Router,
         private activatedRoute: ActivatedRoute,
+        private dataService: DataService,
         private titleService: Title,
         private http: Http
     ) {}
@@ -51,6 +53,7 @@ export class AppComponent implements OnInit {
     private getData () {
         this.http.get('/assets/data/tasks.json').subscribe((res: Response) => {
             this.tasks = res.json();
+            this.dataService.tasks = this.tasks;
         });
     }
 
