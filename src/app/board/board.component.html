@@ -18,56 +18,39 @@
     </div>
     <div class="section-container">
         <div class="board-section todo">
-            <board-task></board-task>
-            <!-- <div class="task normal-priority">
-                <p class="task-title">#Task01</p>
-                <p class="task-name">Perform upgrades</p>
-                <div class="task-tag-container">
-                    <i class="fa fa-tags" aria-hidden="true"></i>
-                    <span class="task-tag">Travel App</span>
-                </div>
-                <div class="task-time-container">
-                    <span class="task-time">4h</span>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                </div>
-            </div> -->
-
+            <ng-container *ngFor="let task of todoTasks">
+                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+            </ng-container>
         </div>
-        <div class="board-section plan-active"></div>
+        <div class="board-section plan-active">
+            <ng-container *ngFor="let task of planActiveTasks">
+                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+            </ng-container>
+        </div>
         <div class="board-section plan-complete">
-
-            <!-- <div class="task low-priority">
-                <p class="task-title">#Task05</p>
-                <p class="task-name">Migrate systems</p>
-                <div class="task-tag-container">
-                    <i class="fa fa-tags" aria-hidden="true"></i>
-                    <span class="task-tag">XCode Project</span>
-                </div>
-                <div class="task-time-container">
-                    <span class="task-time">2d</span>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                </div>
-            </div> -->
-
+            <ng-container *ngFor="let task of planCompleteTasks">
+                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+            </ng-container>
         </div>
-        <div class="board-section development-active"></div>
-        <div class="board-section development-complete"></div>
+        <div class="board-section development-active">
+            <ng-container *ngFor="let task of developmentActiveTasks">
+                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+            </ng-container>
+        </div>
+        <div class="board-section development-complete">
+            <ng-container *ngFor="let task of developmentCompleteTasks">
+                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+            </ng-container>
+        </div>
         <div class="board-section test">
-
-            <!-- <div class="task high-priority">
-                <p class="task-title">#Task07</p>
-                <p class="task-name">Confirmation screen error</p>
-                <div class="task-tag-container">
-                    <i class="fa fa-tags" aria-hidden="true"></i>
-                    <span class="task-tag">XCode Project</span>
-                </div>
-                <div class="task-time-container">
-                    <span class="task-time">4h</span>
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                </div>
-            </div> -->
-
+            <ng-container *ngFor="let task of testTasks">
+                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+            </ng-container>
         </div>
-        <div class="board-section deploy"></div>
+        <div class="board-section deploy">
+            <ng-container *ngFor="let task of deployTasks">
+                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+            </ng-container>
+        </div>
     </div>
 </div>

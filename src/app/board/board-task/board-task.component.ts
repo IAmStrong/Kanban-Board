@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ITask } from '../../shared/task.model';
 
 @Component({
     selector: 'board-task',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class BoardTaskComponent implements OnInit {
+    @Input()
+    task: ITask[];
+    
     constructor () {}
 
     ngOnInit () {}

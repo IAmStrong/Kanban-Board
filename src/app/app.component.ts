@@ -5,8 +5,6 @@ import 'rxjs/add/operator/mergeMap';
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { Title } from '@angular/platform-browser';
-import { Http, Response } from "@angular/http";
-import { DataService } from './data.service';
 
 @Component({
     selector: 'app-root',
@@ -17,14 +15,11 @@ import { DataService } from './data.service';
 export class AppComponent implements OnInit {
     title: string;
     searchAvailable: boolean;
-    tasks: Object;
 
     constructor (
         private router: Router,
         private activatedRoute: ActivatedRoute,
-        private dataService: DataService,
-        private titleService: Title,
-        private http: Http
+        private titleService: Title
     ) {}
 
     ngOnInit () {
@@ -46,15 +41,6 @@ export class AppComponent implements OnInit {
                 this.setTitle(title);
                 this.title = title;
             });
-
-        this.getData();
-    }
-
-    private getData () {
-        this.http.get('/assets/data/tasks.json').subscribe((res: Response) => {
-            this.tasks = res.json();
-            this.dataService.tasks = this.tasks;
-        });
     }
 
     private setTitle (title: string) {

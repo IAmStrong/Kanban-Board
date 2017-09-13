@@ -1,12 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http'; //
+import { HttpModule } from '@angular/http';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { BoardModule } from './board/board.module';
+import { TaskModule } from './task/task.module';
 
 import { routes } from './app.router';
-import { DataService } from './data.service';
+
 import { AppComponent } from './app.component';
-import { BoardModule } from './board/board.module';
-import { DashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
     declarations: [
@@ -15,11 +16,12 @@ import { DashboardModule } from './dashboard/dashboard.module';
     imports: [
         BrowserModule,
         HttpModule,
-        BoardModule,
         DashboardModule,
+        BoardModule,
+        TaskModule,
         routes
     ],
-    providers: [DataService],
+    providers: [],
     bootstrap: [AppComponent]
 })
 
