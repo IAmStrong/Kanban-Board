@@ -1,12 +1,12 @@
-<div class="task normal-priority">
-    <p class="task-title">#Task01</p>
-    <p class="task-name">Perform upgrades</p>
+<div class="task {{ task.priority }}-priority {{last}}">
+    <p class="task-title">{{ task.id | formatTaskId}}</p>
+    <p class="task-name">{{ task.name}}</p>
     <div class="task-tag-container">
         <i class="fa fa-tags" aria-hidden="true"></i>
-        <span class="task-tag">Travel App</span>
+        <span class="task-tag">{{ task.tag }}</span>
     </div>
     <div class="task-time-container">
-        <span class="task-time">4h</span>
+        <span class="task-time">{{ task.estimated_time }}</span>
         <i class="fa fa-clock-o" aria-hidden="true"></i>
     </div>
 </div>

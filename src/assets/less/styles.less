@@ -90,4 +90,10 @@ p {
     margin: @space-width auto;
     background: @bg-initial;
     .box-shadow-secondary();
+    &.task {
+        max-width: @max-width-task - @space-width * 2;
+        margin: @space-width auto;
+        background: transparent;
+        box-shadow: none;
+    }
 }

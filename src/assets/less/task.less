@@ -1,0 +1,233 @@
+// out: ../../app/task/task.component.css, compress: true, sourceMap: false
+
+@import 'variables.less';
+@import 'mixins.less';
+
+.task {
+    width: 100%;
+    background: @bg-initial;
+    .box-shadow-main();
+    .task-header {
+        box-shadow: 0 5px 16px -6px @color-secondary;
+        z-index: 1;
+        .task-title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: @header-height-board;
+            font-size: 22px;
+            color: @text-primary;
+            padding: 0 20px;
+            box-shadow: 0 5px 16px -6px @color-secondary;
+            z-index: 1;
+        }
+        &.lowest-priority {
+            .task-title {
+                .bg-lowest-priority();
+                color: darken(@lowest-priority-primary, 35%);
+                border: 1px solid @lowest-priority-primary;
+            }
+            .fa.fa-pencil-square-o {
+                color: darken(@lowest-priority-primary, 35%);
+            }
+        }
+        &.low-priority {
+            .task-title {
+                .bg-low-priority();
+                color: darken(@low-priority-primary, 35%);
+                border: 1px solid @low-priority-primary;
+            }
+            .fa.fa-pencil-square-o {
+                color: darken(@low-priority-primary, 35%);
+            }
+        }
+        &.normal-priority {
+            .task-title {
+                .bg-normal-priority();
+                color: darken(@normal-priority-primary, 35%);
+                border: 1px solid @normal-priority-primary;
+            }
+            .fa.fa-pencil-square-o {
+                color: darken(@normal-priority-primary, 35%);
+            }
+        }
+        &.high-priority {
+            .task-title {
+                .bg-high-priority();
+                color: darken(@high-priority-primary, 35%);
+                border: 1px solid @high-priority-primary;
+            }
+            .fa.fa-pencil-square-o {
+                color: darken(@high-priority-primary, 35%);
+            }
+        }
+        &.highest-priority {
+            .task-title {
+                .bg-highest-priority();
+                color: darken(@highest-priority-primary, 35%);
+                border: 1px solid @highest-priority-primary;
+            }
+            .fa.fa-pencil-square-o {
+                color: darken(@highest-priority-primary, 35%);
+            }
+        }
+        .task-info.container {
+            .task-info-header,
+            .task-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: @header-height-board;
+                padding: 0 20px;
+                .info-title-header,
+                .info-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20%;
+                    height: inherit;
+                    color: @color-secondary;
+                    font-size: 18px;
+                    text-align: center;
+                }
+                .info-title-header {
+                    color: @text-primary;
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                }
+            }
+            .task-info-header {
+                position: relative;
+            }
+            .task-info {
+                position: relative;
+                height: @header-height-board;
+            }
+        }
+    }
+    .task-description.container {
+        box-shadow: 0 5px 16px -6px @color-secondary;
+        .task-description {
+            position: relative;
+            padding: 0 20px 20px;
+            color: @color-secondary;
+            font-size: 16px;
+        }
+    }
+    .task-reporter.container {
+        box-shadow: 0 5px 16px -6px @color-secondary;
+        z-index: 1;
+        .header-secondary {
+            width: 33.33%;
+            height: auto;
+            padding: 0;
+            box-shadow: none;
+        }
+        .task-reporter {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: @header-height-board;
+            padding: 0 20px;
+            .reporter.text {
+                width: 33.33%;
+            }
+        }
+    }
+    .task-watchers.container {
+        box-shadow: 0 5px 16px -6px @color-secondary;
+        .task-watchers {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: @header-height-board;
+            padding: 0 20px;
+            .watchers.text {
+                width: 50%;
+            }
+        }
+    }
+    .task-dates.container {
+        .task-dates {
+            display: flex;
+            justify-content: center;
+            height: @header-height-board;
+            padding: 0 20px;
+            .dates.text {
+                width: 50%;
+            }
+        }
+        .header-secondary {
+            width: 50%;
+        }
+    }
+    .header {
+        background: transparent;
+        box-shadow: none;
+    }
+    .header-secondary-container {
+        display: flex;
+        justify-content: space-around;
+        height: @header-height-board;
+        padding: 0 20px;
+    }
+    .description-title.header,
+    .reporter-title.header,
+    .watchers-title.header,
+    .dates-title.header  {
+        display: flex;
+        align-items: center;
+        height: @header-height-board;
+        color: @text-primary;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 0 20px;
+    }
+    .header-secondary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        color: @text-primary;
+        font-weight: bold;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 0;
+        box-shadow: none;
+    }
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: @color-secondary;
+        font-size: 18px;
+    }
+    .highlight {
+        background: @color-section;
+    }
+    .task-header,
+    .task-info.container,
+    .task-description.container,
+    .task-reporter.container,
+    .task-watchers.container,
+    .task-dates.container {
+        position: relative;
+        &:hover .fa.fa-pencil-square-o {
+            display: block;
+        }
+    }
+    .fa.fa-pencil-square-o {
+        display: none;
+        position: absolute;
+        top: 22px;
+        right: 20px;
+        font-size: 20px;
+        color: @color-secondary;
+        cursor: pointer;
+        z-index: 2;
+    }
+}

@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
-import { BoardComponent } from './board/board.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BoardComponent } from './board/board.component';
+import { TaskComponent } from './task/task.component';
 
 const router: Routes = [
     {
@@ -22,6 +23,14 @@ const router: Routes = [
         data: {
             title: 'Board',
             searchAvailable: true
+        }
+    },
+    {
+        path: 'task/:id', 
+        component: TaskComponent,
+        data: {
+            title: 'test',
+            searchAvailable: false
         }
     }
 ];
