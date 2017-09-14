@@ -1,0 +1,5 @@
+total tasks;
+circle - catergories (test - 3, development: active - 2, delpoy - 3 etc.);
+cirlce - priority
+cirle - tag
+estimated days total?
