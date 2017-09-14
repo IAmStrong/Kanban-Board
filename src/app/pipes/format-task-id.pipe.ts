@@ -7,7 +7,7 @@ const PREFIX: string = '#Task';
 })
 
 export class FormatTaskIdPipe implements PipeTransform {
-    transform (value: number) {  
+    transform (value: number) {
         return `${PREFIX}${value < 10 ? '0' + value : value}`
     }
 }

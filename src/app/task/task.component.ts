@@ -10,6 +10,7 @@ import { DataService } from '../services/data.service';
 
 export class TaskComponent implements OnInit {
     task: object;
+    category: string;
 
     constructor (
         private _route: ActivatedRoute,
@@ -24,9 +25,14 @@ export class TaskComponent implements OnInit {
         wrapper.classList.add('task');
 
         this.task = this._dataService.getTaskById(this._route.snapshot.params['id']);
+        this.setCategory(this.task);
     }
 
-    ngAfterViewInit () {
+    setCategory (task) {
+        const category = task.category;
+        const key = Object.keys(category)[0];
 
+        this.category = typeof category === 'object' ?
+            `${key}: ${category[key]}` : task.category;
     }
 }

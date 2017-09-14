@@ -19,37 +19,37 @@
     <div class="section-container">
         <div class="board-section todo">
             <ng-container *ngFor="let task of todoTasks">
-                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+                <board-task [task]="task" [routerLink]="['/task', task.id]"></board-task>
             </ng-container>
         </div>
         <div class="board-section plan-active">
             <ng-container *ngFor="let task of planActiveTasks">
-                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+                <board-task [task]="task" [routerLink]="['/task', task.id]"></board-task>
             </ng-container>
         </div>
         <div class="board-section plan-complete">
             <ng-container *ngFor="let task of planCompleteTasks">
-                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+                <board-task [task]="task" [routerLink]="['/task', task.id]"></board-task>
             </ng-container>
         </div>
         <div class="board-section development-active">
             <ng-container *ngFor="let task of developmentActiveTasks">
-                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+                <board-task [task]="task" [routerLink]="['/task', task.id]"></board-task>
             </ng-container>
         </div>
         <div class="board-section development-complete">
             <ng-container *ngFor="let task of developmentCompleteTasks">
-                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+                <board-task [task]="task" [routerLink]="['/task', task.id]"></board-task>
             </ng-container>
         </div>
         <div class="board-section test">
             <ng-container *ngFor="let task of testTasks">
-                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+                <board-task [task]="task" [routerLink]="['/task', task.id]"></board-task>
             </ng-container>
         </div>
         <div class="board-section deploy">
             <ng-container *ngFor="let task of deployTasks">
-                <board-task [task]="task" (click)="showTask(task.id)"></board-task>
+                <board-task [task]="task" [routerLink]="['/task', task.id]"></board-task>
             </ng-container>
         </div>
     </div>
