@@ -58,6 +58,10 @@ export class DataService {
         return SAVED_TASKS.find(task => task.id == id);
     }
 
+    getTotalTasks () {
+        return SAVED_TASKS.length;
+    }
+
     // constructor (private http: Http) {
     //     this.http.get('../assets/data/tasks.json').subscribe((res: Response) => {
     //         console.log('_____________', res.json());

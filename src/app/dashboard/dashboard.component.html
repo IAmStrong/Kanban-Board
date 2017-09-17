@@ -1,14 +1,34 @@
 <div class="dashboard-container">
     <div class="dashboard-wrapper">
-        <div class="total-container dashboard-block">
-            <div class="tasks">Total Tasks: <span class="value">12</span></div>
-            <div class="estimated_time">Total Estimated Time: <span class="value">5d</span></div>
+        <div class="dashboard-header">
+            <div class="header-section primary">
+                <p class="header-title">Total Tasks</p>
+                <p class="header-title">Total Estimated Time</p>
+            </div>
+            <div class="header-section secondary">
+                <p class="header-value">{{ totalTasks }}</p>
+                <p class="header-value">4d</p>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="charts-container">
+
+            </div>
+            <div class="button-container">
+                <div class="button-wrapper">
+                    <button class="button-view-board" routerLink="/board">View Board</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="total-container dashboard-block">
+            <div class="total-wrapper">
+                <p class="total-data">Total Tasks <span class="value">12</span></p>
+                <p class="total-data">Total Estimated Time <span class="value">5d</span></p>
+            </div>
         </div>
         <div class="charts-container dashboard-block">
             
-        </div>
-        <div class="button-container dashboard-block">
-            <button class="button-view-board" routerLink="/board">View Board</button>
-        </div>
+        </div> -->
+
     </div>
 </div>
